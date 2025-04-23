@@ -75,8 +75,9 @@ h1 {
 }
 
 .ice-pop-container img {
-    max-height: 200px;
-    width: auto; /* Maintains aspect ratio */
+  max-height: 200px;
+  width: auto;
+  cursor: pointer;
 }
 
 @keyframes fuwafuwa {
