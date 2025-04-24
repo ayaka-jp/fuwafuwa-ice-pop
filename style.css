@@ -1,77 +1,79 @@
 @charset "utf-8";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .wrapper {
-    padding-block: 80px;
+  padding-block: 80px;
 }
 
 @media screen and (max-width:600px) {
-    .wrapper {
-        padding-block: 3vh;
-    }
+  .wrapper {
+    padding-block: 3vh;
+  }
 }
 
 h1 {
-    max-width: 600px;
-    margin-inline: auto;
-    padding-inline: 4%;
+  max-width: 600px;
+  margin-inline: auto;
+  padding-inline: 4%;
 }
 
 
 /* Add a sparkle animation to .ice-pop-summers */
 .ice-pop-summers {
-    position: relative;
-    overflow: hidden;
-  }
+  position: relative;
+  overflow: hidden;
+}
 
-  .ice-pop-summers img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  
-  .ice-pop-summers::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -50%;
-    width: 60%;
-    height: 100%;
-    background: linear-gradient(
-      120deg,
+.ice-pop-summers img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ice-pop-summers::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(120deg,
       rgba(255, 255, 255, 0) 0%,
       rgba(255, 255, 255, 0.9) 50%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    transform: skewX(-20deg);
-    animation: shine 2s ease-in-out infinite;
-    animation-fill-mode: forwards;
-    will-change: left;
-    z-index: 2;
-    pointer-events: none;
+      rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-20deg);
+  animation: shine 2s ease-in-out infinite;
+  animation-fill-mode: forwards;
+  will-change: left;
+  z-index: 2;
+  pointer-events: none;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
   }
-  
-  @keyframes shine {
-    0% {
-      left: -100%;
-    }
-    100% {
-      left: 150%;
-    }
+
+  100% {
+    left: 150%;
   }
+}
 
 /* Set all ice pop characters to 120px wide and arrange them in a row using flexbox */
 .ice-pop-container {
-    display: flex;
-    gap: 30px; /* Optional: Adds spacing between items */
-    justify-content: center; /* Horizontally centers the content */
-    margin-top: 40px;
-    flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 30px;
+  justify-items: center;
+  padding-inline: 30px;
+  max-width: 1000px;
+  margin: 40px auto 0;
+  box-sizing: border-box;
 }
 
 .ice-pop-container img {
@@ -80,17 +82,32 @@ h1 {
   cursor: pointer;
 }
 
-@media screen and (max-width:400px) {
-  .ice-pop-container img {
-    max-height: 160px;
+@media screen and (max-width: 1024px) {
+  .ice-pop-container {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 680px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ice-pop-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @keyframes fuwafuwa {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
   }
-  
-  .fuwafuwa {
-    animation: fuwafuwa 1s ease-in-out 0s 3; /* 1秒 × 3回だけ */
+
+  50% {
+    transform: translateY(-10px);
   }
+}
+
+.fuwafuwa {
+  animation: fuwafuwa 1s ease-in-out 0s 3;
+  /* 1秒 × 3回だけ */
+}
