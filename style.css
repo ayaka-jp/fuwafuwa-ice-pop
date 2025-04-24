@@ -86,7 +86,7 @@ h1 {
 @media screen and (max-width: 600px) {
   .ice-pop-container {
     grid-template-columns: repeat(2, 1fr);
-    padding-inline: 16px;
+    padding-inline: 32px;
     max-width: 320px;
     margin-block: 16px;
   }
