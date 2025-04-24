@@ -13,6 +13,7 @@
 @media screen and (max-width:600px) {
   .wrapper {
     padding-block: 3vh;
+    height: 100vh;
   }
 }
 
