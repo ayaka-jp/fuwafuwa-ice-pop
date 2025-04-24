@@ -83,8 +83,6 @@ h1 {
   max-width: 1000px;
   margin: 40px auto 0;
   box-sizing: border-box;
-  height: 100%;
-  overflow-y: auto;
 }
 
 @media screen and (max-width: 1024px) {
