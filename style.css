@@ -80,6 +80,12 @@ h1 {
   cursor: pointer;
 }
 
+@media screen and (max-width:400px) {
+  .ice-pop-container img {
+    max-height: 160px;
+  }
+}
+
 @keyframes fuwafuwa {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
