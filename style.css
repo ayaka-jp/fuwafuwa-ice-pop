@@ -103,6 +103,7 @@ h1 {
   .ice-pop-container img {
     max-height: 156px;
   }
+}
 
   @keyframes fuwafuwa {
 
@@ -120,4 +121,3 @@ h1 {
     animation: fuwafuwa 1s ease-in-out 0s 3;
     /* 1秒 × 3回だけ */
   }
-}
